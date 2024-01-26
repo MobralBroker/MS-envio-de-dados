@@ -6,13 +6,15 @@ import org.springframework.stereotype.Service;
 @Service
 public class WebSocketMessageBroker {
 
-    private final SimpMessagingTemplate template;
+//    private final SimpMessagingTemplate template;
+//
+//    public WebSocketSession(SimpMessagingTemplate template) {
+//        this.template = template;
+//    }
+//
+//    public void sendMessage(String topic, String message) {
+//        template.convertAndSend(topic, message);
+//    }
+//
 
-    public WebSocketMessageBroker(SimpMessagingTemplate template) {
-        this.template = template;
-    }
-
-    public void sendMessage(String topic, String message) {
-        template.convertAndSend(topic, message);
-    }
 }
