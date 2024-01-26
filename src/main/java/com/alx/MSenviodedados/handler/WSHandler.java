@@ -1,6 +1,7 @@
 package com.alx.MSenviodedados.handler;
 
 
+import com.alx.MSenviodedados.controller.KafkaConsumerService;
 import org.springframework.stereotype.Component;
 import org.springframework.web.socket.CloseStatus;
 import org.springframework.web.socket.TextMessage;
@@ -10,14 +11,12 @@ import org.springframework.web.socket.handler.TextWebSocketHandler;
 
 import java.io.IOException;
 import java.util.Set;
-import java.util.Timer;
-import java.util.TimerTask;
 import java.util.concurrent.ConcurrentHashMap;
 
 @Component
-public class WSHandler extends TextWebSocketHandler {
+public class WSHandler extends TextWebSocketHandler implements KafkaConsumerService {
 //    private WebSocketSession currentSession;
-    private Set<WebSocketSession> sessions = ConcurrentHashMap.newKeySet();
+    public Set<WebSocketSession> sessions = ConcurrentHashMap.newKeySet();
 
     @Override
     public void afterConnectionEstablished(WebSocketSession session) {
@@ -31,7 +30,7 @@ public class WSHandler extends TextWebSocketHandler {
         System.out.println("[afterConnectionEstablished] session id" + session.getAcceptedProtocol());
         System.out.println("[afterConnectionEstablished] session id" + session.getHandshakeHeaders());
         session.getAttributes().put("timeout", 1000);
-
+       // sendMessageToAll("New Peer");
 
 
     }
@@ -64,11 +63,10 @@ public class WSHandler extends TextWebSocketHandler {
 
     // Envia mensagem para todas as sessões
     public void sendMessageToAll(String message) {
-        TextMessage msg = new TextMessage(message);
         for (WebSocketSession session : sessions) {
             try {
                 if (session.isOpen()) {
-                    session.sendMessage(msg);
+                    session.sendMessage(new TextMessage(message));
                 }
             } catch (IOException e) {
                 // Trata a exceção adequadamente

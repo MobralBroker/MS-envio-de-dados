@@ -14,13 +14,18 @@ import org.springframework.web.socket.WebSocketSession;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import java.io.IOException;
+import java.util.Set;
 import java.util.UUID;
+import java.util.concurrent.ConcurrentHashMap;
 
 @Service
 @AllArgsConstructor
 public class KafkaConsumerService {
 
-    private final WSHandler wsHandler;
+//    private final WSHandler wsHandler;
+
+    public Set<WebSocketSession> sessions = ConcurrentHashMap.newKeySet();
+
 
     private final Logger LOG = LoggerFactory.getLogger(KafkaConsumerService.class);
 
@@ -30,10 +35,7 @@ public class KafkaConsumerService {
 
         LOG.info("CONSUMER message from Kafka: {}", record.value());
 
-        wsHandler.sendMessageToAll(record.value());
-
        // session.sendMessage(new TextMessage(record.value()));
-
         /* Business rule code with message */
     }
 
