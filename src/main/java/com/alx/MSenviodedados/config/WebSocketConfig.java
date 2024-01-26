@@ -9,7 +9,7 @@ import org.springframework.web.socket.config.annotation.*;
 
 @Configuration
 @EnableWebSocket
-public class WebSocketConfig implements WebSocketConfigurer { //implements WebSocketMessageBrokerConfigurer {
+public class WebSocketConfig implements WebSocketConfigurer {
 
     public WebSocketHandler myHandler() {
         return new WSHandler();
@@ -19,16 +19,6 @@ public class WebSocketConfig implements WebSocketConfigurer { //implements WebSo
     public void registerWebSocketHandlers(WebSocketHandlerRegistry registry) {
         registry.addHandler(myHandler(), "/chat").setAllowedOrigins("*").addInterceptors(new CustomHandshakeInterceptor());
     }
-
-//    @Overridex
-//    public void registerWebSocketHandlers(WebSocketHandlerRegistry registry) {
-//        registry.addHandler(myHandler(), "/chat")
-//                .setAllowedOrigins("*")
-//                .addInterceptors(new CustomHandshakeInterceptor())
-//                .setProtocolHandlers(protocolHandlerRegistry -> {
-//                    protocolHandlerRegistry.addProtocolHandler("seu-subprotocolo-aqui");
-//                });
-//    }
 
 }
 

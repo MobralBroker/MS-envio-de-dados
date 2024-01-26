@@ -5,6 +5,6 @@ import org.springframework.web.socket.WebSocketSession;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 
-public interface teste {
+public interface sessionsInterface {
     Set<WebSocketSession> sessions = ConcurrentHashMap.newKeySet();
 }
