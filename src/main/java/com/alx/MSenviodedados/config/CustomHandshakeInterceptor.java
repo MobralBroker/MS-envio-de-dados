@@ -22,14 +22,11 @@ public class CustomHandshakeInterceptor implements HandshakeInterceptor {
 
     @Override
     public boolean beforeHandshake(ServerHttpRequest request, ServerHttpResponse response, WebSocketHandler wsHandler, Map<String, Object> attributes) throws Exception {
-        // Extrair e validar o token
-        // O token pode ser passado como um parâmetro de consulta ou no cabeçalho
         String headerToken = request.getHeaders().getFirst("cookie");
         String token=null;
 
         int startPosition = headerToken.indexOf("X-Authorization=");
         String result = headerToken.substring(startPosition + "X-Authorization=".length());
-
 
         System.out.println("headerToken :::: " + headerToken);
         System.out.println("result :::: " + result);
