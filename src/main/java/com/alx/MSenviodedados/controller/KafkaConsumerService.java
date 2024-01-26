@@ -1,5 +1,6 @@
 package com.alx.MSenviodedados.controller;
 
+import com.alx.MSenviodedados.handler.WSDashboardHandler;
 import com.alx.MSenviodedados.handler.WSHandler;
 import com.alx.MSenviodedados.handler.sessionsInterface;
 import lombok.AllArgsConstructor;
@@ -15,6 +16,8 @@ import org.slf4j.LoggerFactory;
 public class KafkaConsumerService implements sessionsInterface {
 
     private final WSHandler wsHandler;
+    private final WSDashboardHandler wsDash;
+
     private final Logger LOG = LoggerFactory.getLogger(KafkaConsumerService.class);
 
     @SneakyThrows
@@ -24,6 +27,15 @@ public class KafkaConsumerService implements sessionsInterface {
         LOG.info("CONSUMER message from Kafka: {}", record.value());
 
         wsHandler.sendMessageToAll(record.value());
+    }
+
+    @SneakyThrows
+    @KafkaListener(topics = "solinfbroker.public.cliente",  groupId = "groupId")
+    public void listeningDash(ConsumerRecord<String, String> record)  throws InterruptedException {
+
+        LOG.info("CONSUMER message from Kafka: {}", record.value());
+
+        wsDash.sendMessageToAll(record.value());
     }
 
 }
