@@ -1,17 +1,14 @@
 package com.alx.MSenviodedados.handler;
 
-
 import org.springframework.stereotype.Component;
 import org.springframework.web.socket.CloseStatus;
 import org.springframework.web.socket.TextMessage;
 import org.springframework.web.socket.WebSocketSession;
 import org.springframework.web.socket.handler.TextWebSocketHandler;
 
-
 import java.io.IOException;
-
 @Component
-public class WSHandler extends TextWebSocketHandler implements sessionsInterface {
+public class WSDashboardHandler extends TextWebSocketHandler implements sessionsInterface {
 
     @Override
     public void afterConnectionEstablished(WebSocketSession session) {
@@ -48,5 +45,4 @@ public class WSHandler extends TextWebSocketHandler implements sessionsInterface
             }
         }
     }
-
 }

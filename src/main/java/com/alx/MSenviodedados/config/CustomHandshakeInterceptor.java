@@ -1,8 +1,6 @@
 package com.alx.MSenviodedados.config;
 
 import com.alx.MSenviodedados.exceptions.ApiRequestException;
-import jakarta.servlet.http.HttpServletResponse;
-import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -13,8 +11,7 @@ import org.springframework.web.socket.WebSocketHandler;
 import org.springframework.web.socket.server.HandshakeInterceptor;
 
 import java.util.Map;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
+
 
 public class CustomHandshakeInterceptor implements HandshakeInterceptor {
     @Value("${apiAutenticacao.path}")
