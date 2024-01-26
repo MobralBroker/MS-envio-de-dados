@@ -2,6 +2,7 @@ package com.alx.MSenviodedados.controller;
 
 import com.alx.MSenviodedados.handler.WSHandler;
 import com.alx.MSenviodedados.service.WebSocketMessageBroker;
+import lombok.AllArgsConstructor;
 import lombok.SneakyThrows;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,10 +17,10 @@ import java.io.IOException;
 import java.util.UUID;
 
 @Service
-@Component
+@AllArgsConstructor
 public class KafkaConsumerService {
 
-    WSHandler handler;
+    private final WSHandler wsHandler;
 
     private final Logger LOG = LoggerFactory.getLogger(KafkaConsumerService.class);
 
@@ -29,7 +30,7 @@ public class KafkaConsumerService {
 
         LOG.info("CONSUMER message from Kafka: {}", record.value());
 
-        handler.sendMessageToClient(record.value());
+        wsHandler.sendMessageToAll(record.value());
 
        // session.sendMessage(new TextMessage(record.value()));
 

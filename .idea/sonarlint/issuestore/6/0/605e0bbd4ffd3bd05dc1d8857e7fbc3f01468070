@@ -1,0 +1,7 @@
+
+{	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(±»ë©ÿÿÿÿÿ8Á©Ã°Ô1
+i	java:S116"NRename this field "LOG" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ý¾Åx8Í©Ã°Ô1
+\
+java:S6213":Rename this variable to not match a restricted identifier.(©™ø°ÿÿÿÿÿ8Ø©Ã°Ô1
+]	java:S125#"<This block of commented-out lines of code should be removed.(š×ï†þÿÿÿÿ8à©Ã°Ô1
+]	java:S1250"<This block of commented-out lines of code should be removed.(” ’ÿÿÿÿÿ8â©Ã°Ô1

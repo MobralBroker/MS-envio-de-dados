@@ -9,17 +9,21 @@ import org.springframework.web.socket.handler.TextWebSocketHandler;
 
 
 import java.io.IOException;
+import java.util.Set;
 import java.util.Timer;
 import java.util.TimerTask;
+import java.util.concurrent.ConcurrentHashMap;
 
 @Component
 public class WSHandler extends TextWebSocketHandler {
-    private WebSocketSession currentSession;
+//    private WebSocketSession currentSession;
+    private Set<WebSocketSession> sessions = ConcurrentHashMap.newKeySet();
 
     @Override
     public void afterConnectionEstablished(WebSocketSession session) {
 
-        currentSession = session;
+//        currentSession = session;
+        sessions.add(session);
 
         System.out.println("[afterConnectionEstablished] session id" + session.getId());
         session.getAcceptedProtocol();
@@ -27,17 +31,7 @@ public class WSHandler extends TextWebSocketHandler {
         System.out.println("[afterConnectionEstablished] session id" + session.getAcceptedProtocol());
         System.out.println("[afterConnectionEstablished] session id" + session.getHandshakeHeaders());
         session.getAttributes().put("timeout", 1000);
-        new Timer().scheduleAtFixedRate(new TimerTask()  {
-            @Override
-            public void run() {
-                try {
-                    currentSession.sendMessage(new TextMessage("$ALX.CHK"));
-                } catch (IOException e) {
-                    throw new RuntimeException(e);
-                }
-            }
 
-        }, 1000L, 1000L);
 
 
     }
@@ -50,19 +44,36 @@ public class WSHandler extends TextWebSocketHandler {
     @Override
     public void afterConnectionClosed(WebSocketSession session, CloseStatus status) {
         System.out.println("[afterConnectionClosed] session id" + session.getId());
+        sessions.remove(session);
     }
 
 
-    public void sendMessageToClient(String message) {
-        try {
-            if (currentSession != null && currentSession.isOpen()) {
-                currentSession.sendMessage(new TextMessage(message));
-            } else {
+
+
+//    public void sendMessageToClient(String message) {
+//        try {
+//            if (currentSession != null && currentSession.isOpen()) {
+//                currentSession.sendMessage(new TextMessage(message));
+//            } else {
+//            }
+//        } catch (IOException e) {
+//            throw new RuntimeException(e);
+//        }
+//    }
+
+
+    // Envia mensagem para todas as sessões
+    public void sendMessageToAll(String message) {
+        TextMessage msg = new TextMessage(message);
+        for (WebSocketSession session : sessions) {
+            try {
+                if (session.isOpen()) {
+                    session.sendMessage(msg);
+                }
+            } catch (IOException e) {
+                // Trata a exceção adequadamente
             }
-        } catch (IOException e) {
-            throw new RuntimeException(e);
         }
     }
-
 
 }
