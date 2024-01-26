@@ -14,9 +14,9 @@ import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 
 @Component
-public class WSHandler extends TextWebSocketHandler implements KafkaConsumerService {
+public class WSHandler extends TextWebSocketHandler implements teste{
 //    private WebSocketSession currentSession;
-    public Set<WebSocketSession> sessions = ConcurrentHashMap.newKeySet();
+
 
     @Override
     public void afterConnectionEstablished(WebSocketSession session) {

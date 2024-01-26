@@ -7,3 +7,5 @@ k
 ;src/main/java/com/alx/MSenviodedados/handler/WSHandler.java,8/7/877764da0423d7107ac789e30d88bd6574656316
 s
 Csrc/main/java/com/alx/MSenviodedados/MsEnvioDeDadosApplication.java,f/1/f16fdc348237d6bd4d734fff306902101780ddca
+g
+7src/main/java/com/alx/MSenviodedados/handler/teste.java,e/e/ee0cc2e4b8cccef197f8844ade970b01802dd6fa

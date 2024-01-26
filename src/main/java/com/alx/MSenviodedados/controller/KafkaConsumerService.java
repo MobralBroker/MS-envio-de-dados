@@ -1,6 +1,7 @@
 package com.alx.MSenviodedados.controller;
 
 import com.alx.MSenviodedados.handler.WSHandler;
+import com.alx.MSenviodedados.handler.teste;
 import com.alx.MSenviodedados.service.WebSocketMessageBroker;
 import lombok.AllArgsConstructor;
 import lombok.SneakyThrows;
@@ -20,11 +21,10 @@ import java.util.concurrent.ConcurrentHashMap;
 
 @Service
 @AllArgsConstructor
-public class KafkaConsumerService {
+public class KafkaConsumerService implements teste {
 
-//    private final WSHandler wsHandler;
+    private final WSHandler wsHandler;
 
-    public Set<WebSocketSession> sessions = ConcurrentHashMap.newKeySet();
 
 
     private final Logger LOG = LoggerFactory.getLogger(KafkaConsumerService.class);
@@ -35,7 +35,7 @@ public class KafkaConsumerService {
 
         LOG.info("CONSUMER message from Kafka: {}", record.value());
 
-       // session.sendMessage(new TextMessage(record.value()));
+        wsHandler.sendMessageToAll(record.value());
         /* Business rule code with message */
     }
 
