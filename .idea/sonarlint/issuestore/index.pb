@@ -15,3 +15,7 @@ H
 sonar-project.properties,2/5/2538046035efb77ecc44e1fd2eec1e2641594d4c
 7
 pom.xml,4/4/442292b8a7efeabbe4cc176709b833b1792140ec
+p
+@src/main/java/com/alx/MSenviodedados/config/WebSocketConfig.java,9/4/94f42f1d2dfd008f20c5221eaf2d3ea811aec09d
+{
+Ksrc/main/java/com/alx/MSenviodedados/config/CustomHandshakeInterceptor.java,3/7/37e08f86de79dc60bd46689766b25f244cca56a7

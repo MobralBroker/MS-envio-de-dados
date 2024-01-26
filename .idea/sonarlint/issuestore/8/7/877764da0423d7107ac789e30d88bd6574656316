@@ -1,19 +1,10 @@
 
 Š
-java:S1192"hDefine a constant instead of duplicating this literal "[afterConnectionEstablished] session id" 3 times.(ÿàÆ×ùÿÿÿÿ8È–„²Ô1
+java:S1192"hDefine a constant instead of duplicating this literal "[afterConnectionEstablished] session id" 3 times.(ÿàÆ×ùÿÿÿÿ8í‰¡»Ô1
 {	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ãØ¯‚ùÿÿÿÿ8ÉÔ±Ô1
-]	java:S125"<This block of commented-out lines of code should be removed.(ïÔÀùÿÿÿÿ8Ø–„²Ô1
-X	java:S125"<This block of commented-out lines of code should be removed.(Æ‡Éÿ8Ú–„²Ô1
-L	java:S106"+Replace this use of System.out by a logger.(ÿàÆ×ùÿÿÿÿ8Ú–„²Ô1
-L	java:S106"+Replace this use of System.out by a logger.(Ùãµ‰úÿÿÿÿ8Û–„²Ô1
-L	java:S106"+Replace this use of System.out by a logger.(Œ”™úüÿÿÿÿ8Û–„²Ô1
-]	java:S125!"<This block of commented-out lines of code should be removed.(–¥Òåÿÿÿÿÿ8Û–„²Ô1
-L	java:S106("+Replace this use of System.out by a logger.(ü…Åüÿÿÿÿ8Ü–„²Ô1
-L	java:S106-"+Replace this use of System.out by a logger.(µÛªùüÿÿÿÿ8İ–„²Ô1
-]	java:S1254"<This block of commented-out lines of code should be removed.(ÕéÛ–øÿÿÿÿ8ß–„²Ô1
-u
-java:S1128"SRemove this unused import 'com.alx.MSenviodedados.controller.KafkaConsumerService'.(ŸßÊóüÿÿÿÿ8œïœ²Ô1
-L
-java:S1128"*Remove this unused import 'java.util.Set'.(ö²„¤şÿÿÿÿ8ïœ²Ô1
-e
-java:S1128"CRemove this unused import 'java.util.concurrent.ConcurrentHashMap'.(ÓŠÓøúÿÿÿÿ8ïœ²Ô1
+L	java:S106"+Replace this use of System.out by a logger.(ÿàÆ×ùÿÿÿÿ8Š¡»Ô1
+L	java:S106"+Replace this use of System.out by a logger.(Ùãµ‰úÿÿÿÿ8‚Š¡»Ô1
+L	java:S106"+Replace this use of System.out by a logger.(Œ”™úüÿÿÿÿ8‚Š¡»Ô1
+L	java:S106"+Replace this use of System.out by a logger.(ü…Åüÿÿÿÿ8„Š¡»Ô1
+L	java:S106$"+Replace this use of System.out by a logger.(µÛªùüÿÿÿÿ8…Š¡»Ô1
+E	java:S108.")Either remove or fill this block of code.(ï­£Ä8‡Š¡»Ô1
