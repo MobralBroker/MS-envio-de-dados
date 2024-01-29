@@ -21,3 +21,7 @@ t
 Dsrc/main/java/com/alx/MSenviodedados/handler/WSDashboardHandler.java,d/a/dafb81ba8cb923001691b88cb1785036122d1de0
 k
 ;src/main/java/com/alx/MSenviodedados/MensagemWebsocket.java,3/2/3238ae480b18a18d184f9ec1e7665d3e898c07f0
+p
+@src/main/java/com/alx/MSenviodedados/kafka/KafkaAdminConfig.java,9/3/930f307f310f9574e0d62b260af970335cda4bcc
+r
+Bsrc/main/java/com/alx/MSenviodedados/kafka/KafkaConfiguration.java,a/7/a7a93a5f990ffdfccbeab3c20ef4f57f78fa6082

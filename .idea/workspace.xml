@@ -5,11 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e6ac0500-175b-4cf5-b95c-4094344bffa4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/alx/MSenviodedados/kafka/KafkaAdminConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/alx/MSenviodedados/kafka/KafkaConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/alx/MSenviodedados/kafka/KafkaProducerMessage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/alx/MSenviodedados/kafka/Topicos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/alx/MSenviodedados/kafka/KafkaConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/alx/MSenviodedados/kafka/KafkaConfiguration.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,6 +42,7 @@
     "Application.MsEnvioDeDadosApplication.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "teste__michael",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/Users/alexandre/Documents/Github/MS-envio-de-dados/src/main/java/com/alx/MSenviodedados"
   }
