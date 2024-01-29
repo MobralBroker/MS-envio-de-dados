@@ -1,0 +1,10 @@
+
+ƒ
+java:S1192"hDefine a constant instead of duplicating this literal "[afterConnectionEstablished] session id" 3 times.(ÿàÆ×ùÿÿÿÿ
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ãØ¯‚ùÿÿÿÿ
+E	java:S106"+Replace this use of System.out by a logger.(ÿàÆ×ùÿÿÿÿ
+E	java:S106"+Replace this use of System.out by a logger.(Ùãµ‰úÿÿÿÿ
+E	java:S106"+Replace this use of System.out by a logger.(Œ”™úüÿÿÿÿ
+E	java:S106"+Replace this use of System.out by a logger.(ü…ŽÅüÿÿÿÿ
+E	java:S106!"+Replace this use of System.out by a logger.(µÛªùüÿÿÿÿ
+>	java:S108+")Either remove or fill this block of code.(ï­£Ä

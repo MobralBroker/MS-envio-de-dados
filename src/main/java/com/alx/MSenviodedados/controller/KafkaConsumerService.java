@@ -21,21 +21,31 @@ public class KafkaConsumerService implements sessionsInterface {
     private final Logger LOG = LoggerFactory.getLogger(KafkaConsumerService.class);
 
     @SneakyThrows
-    @KafkaListener(topics = "solinfbroker.public.ordem",  groupId = "groupId")
+    @KafkaListener(topics = "solinfbroker.public.ordem",  groupId = "grupo-envio")
     public void listening(ConsumerRecord<String, String> record)  throws InterruptedException {
-
         LOG.info("CONSUMER message from Kafka: {}", record.value());
-
-        wsHandler.sendMessageToAll(record.value());
+        wsHandler.sendMessageToAll("{\"tipo\":\"ordem\",\"dados\":" + record.value()+"}");
     }
 
     @SneakyThrows
-    @KafkaListener(topics = "solinfbroker.public.cliente",  groupId = "groupId")
-    public void listeningDash(ConsumerRecord<String, String> record)  throws InterruptedException {
-
+    @KafkaListener(topics = "solinfbroker.public.historico_preco",  groupId = "grupo-envio")
+    public void listeningHistoricoPreco(ConsumerRecord<String, String> record)  throws InterruptedException {
         LOG.info("CONSUMER message from Kafka: {}", record.value());
+        wsDash.sendMessageToAll("{\"tipo\":\"historico\",\"dados\": "+record.value()+"}");
+    }
 
-        wsDash.sendMessageToAll(record.value());
+    @SneakyThrows
+    @KafkaListener(topics = "solinfbroker.public.ativo",  groupId = "grupo-envio")
+    public void listeningAtivo(ConsumerRecord<String, String> record)  throws InterruptedException {
+        LOG.info("CONSUMER message from Kafka: {}", record.value());
+        wsDash.sendMessageToAll("{\"tipo\":\"ativo\",\"dados\":"+record.value()+"}");
+    }
+
+    @SneakyThrows
+    @KafkaListener(topics = "solinfbroker.public.cliente",  groupId = "grupo-envio")
+    public void listeningDash(ConsumerRecord<String, String> record)  throws InterruptedException {
+        LOG.info("CONSUMER message from Kafka: {}", record.value());
+        wsDash.sendMessageToAll("{\"tipo\":\"cliente\",\"dados\":"+record.value()+"}");
     }
 
 }

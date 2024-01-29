@@ -1,16 +1,10 @@
 
-x
-Hsrc/main/java/com/alx/MSenviodedados/service/WebSocketMessageBroker.java,a/a/aaae4fdb1275c2142b9a0f7db6baff4d882d7393
 y
 Isrc/main/java/com/alx/MSenviodedados/controller/KafkaConsumerService.java,6/0/605e0bbd4ffd3bd05dc1d8857e7fbc3f01468070
 k
 ;src/main/java/com/alx/MSenviodedados/handler/WSHandler.java,8/7/877764da0423d7107ac789e30d88bd6574656316
 s
 Csrc/main/java/com/alx/MSenviodedados/MsEnvioDeDadosApplication.java,f/1/f16fdc348237d6bd4d734fff306902101780ddca
-g
-7src/main/java/com/alx/MSenviodedados/handler/teste.java,e/e/ee0cc2e4b8cccef197f8844ade970b01802dd6fa
-J
-.github/workflows/main.yml,c/7/c778226b6c4c0fb51cf7942c8ee1f3d9fc1249d0
 H
 sonar-project.properties,2/5/2538046035efb77ecc44e1fd2eec1e2641594d4c
 7
@@ -19,3 +13,11 @@ p
 @src/main/java/com/alx/MSenviodedados/config/WebSocketConfig.java,9/4/94f42f1d2dfd008f20c5221eaf2d3ea811aec09d
 {
 Ksrc/main/java/com/alx/MSenviodedados/config/CustomHandshakeInterceptor.java,3/7/37e08f86de79dc60bd46689766b25f244cca56a7
+K
+.github/workflows/sonar.yml,3/f/3ff5264e70c891beb6f9ead3c07cccf6f5fd1211
+x
+Hsrc/main/java/com/alx/MSenviodedados/exceptions/ApiRequestException.java,d/a/da311b9d6636ee05a84bfe07a90e7fd9f58385d5
+t
+Dsrc/main/java/com/alx/MSenviodedados/handler/WSDashboardHandler.java,d/a/dafb81ba8cb923001691b88cb1785036122d1de0
+k
+;src/main/java/com/alx/MSenviodedados/MensagemWebsocket.java,3/2/3238ae480b18a18d184f9ec1e7665d3e898c07f0
