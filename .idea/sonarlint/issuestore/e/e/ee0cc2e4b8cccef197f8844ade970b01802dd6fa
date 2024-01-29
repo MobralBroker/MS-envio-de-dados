@@ -1,0 +1,7 @@
+
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ãØ¯‚ùÿÿÿÿ
+l	java:S114"QRename this interface name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(‹ÊäU8ÔË²Ô1
+_
+java:S1214"CMove constants defined in this interfaces to another class or enum.(‹ÊäU8„²Ô1
+P
+java:S2386	"3Move "sessions" to a class and lower its visibility(è˜â¶8Œ²Ô1

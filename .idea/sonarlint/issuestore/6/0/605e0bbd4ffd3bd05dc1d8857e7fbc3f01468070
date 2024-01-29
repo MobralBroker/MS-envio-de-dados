@@ -1,0 +1,11 @@
+
+{	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(±»ë©ÿÿÿÿÿ8Á©Ã°Ô1
+i	java:S116"NRename this field "LOG" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ý¾Åx8…‰¡»Ô1
+™
+java:S1130"wRemove the declaration of thrown exception 'java.lang.InterruptedException', as it cannot be thrown from method's body.(©™ø°ÿÿÿÿÿ8‰‰¡»Ô1
+\
+java:S6213":Rename this variable to not match a restricted identifier.(©™ø°ÿÿÿÿÿ8Š‰¡»Ô1
+”
+java:S1130""wRemove the declaration of thrown exception 'java.lang.InterruptedException', as it cannot be thrown from method's body.(Ð’€Î8Œ‰¡»Ô1
+W
+java:S6213"":Rename this variable to not match a restricted identifier.(Ð’€Î8Œ‰¡»Ô1
