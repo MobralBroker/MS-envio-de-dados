@@ -20,8 +20,8 @@ WORKDIR /MS-envio-de-dados
 # Copia apenas o JAR construído do estágio anterior
 COPY --from=builder /MS-envio-de-dados/target/*.jar app.jar
 
-# Expondo a porta 8080
-EXPOSE 8082
+# Expondo a porta 8083
+EXPOSE 8083
 
 # Comando para executar a aplicação quando o contêiner for iniciado
 CMD ["java", "-jar", "app.jar"]
