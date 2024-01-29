@@ -1,0 +1,21 @@
+
+‚
+java:S1192"`Define a constant instead of duplicating this literal "CONSUMER message from Kafka: {}" 4 times.(αε–τώÿÿÿÿ8τΆ³Υ1
+{	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(±»λ©ÿÿÿÿÿ8£τΆ³Υ1
+i	java:S116"NRename this field "LOG" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(έΎΕx8°τΆ³Υ1
+™
+java:S1130"wRemove the declaration of thrown exception 'java.lang.InterruptedException', as it cannot be thrown from method's body.(©™ψ°ÿÿÿÿÿ8¶τΆ³Υ1
+\
+java:S6213":Rename this variable to not match a restricted identifier.(©™ψ°ÿÿÿÿÿ8·τΆ³Υ1
+”
+java:S1130 "wRemove the declaration of thrown exception 'java.lang.InterruptedException', as it cannot be thrown from method's body.(Άθύ8ΉτΆ³Υ1
+W
+java:S6213 ":Rename this variable to not match a restricted identifier.(Άθύ8ΉτΆ³Υ1
+™
+java:S1130'"wRemove the declaration of thrown exception 'java.lang.InterruptedException', as it cannot be thrown from method's body.(ω¤λωÿÿÿÿ8»τΆ³Υ1
+\
+java:S6213'":Rename this variable to not match a restricted identifier.(ω¤λωÿÿÿÿ8ΌτΆ³Υ1
+”
+java:S1130."wRemove the declaration of thrown exception 'java.lang.InterruptedException', as it cannot be thrown from method's body.(Π’€Ξ8½τΆ³Υ1
+W
+java:S6213.":Rename this variable to not match a restricted identifier.(Π’€Ξ8ΎτΆ³Υ1
