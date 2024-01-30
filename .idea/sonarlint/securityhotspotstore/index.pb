@@ -25,3 +25,5 @@ p
 @src/main/java/com/alx/MSenviodedados/kafka/KafkaAdminConfig.java,9/3/930f307f310f9574e0d62b260af970335cda4bcc
 r
 Bsrc/main/java/com/alx/MSenviodedados/kafka/KafkaConfiguration.java,a/7/a7a93a5f990ffdfccbeab3c20ef4f57f78fa6082
+s
+Csrc/main/java/com/alx/MSenviodedados/handler/sessionsInterface.java,0/f/0f7c161bd025ebfcb1270be3242ffe9f8206a494

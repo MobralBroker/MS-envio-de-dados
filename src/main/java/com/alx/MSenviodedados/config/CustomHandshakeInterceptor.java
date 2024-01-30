@@ -25,8 +25,6 @@ public class CustomHandshakeInterceptor implements HandshakeInterceptor {
         int startPosition = headerToken.indexOf("X-Authorization=");
         String result = headerToken.substring(startPosition + "X-Authorization=".length());
 
-        System.out.println("headerToken :::: " + headerToken);
-        System.out.println("result :::: " + result);
         token = result;
 
         if (token == null || !validateToken(token)) {
@@ -48,15 +46,9 @@ public class CustomHandshakeInterceptor implements HandshakeInterceptor {
             if(responseAuth.getStatusCode().equals(HttpStatus.UNAUTHORIZED)){
                 throw new ApiRequestException(token);
             }
-            System.out.println(" validate token true");
-
             return true;
 
         }catch (Exception e){
-
-            System.out.println(e);
-            System.out.println(" validate token false");
-
             return false;
         }
     }
