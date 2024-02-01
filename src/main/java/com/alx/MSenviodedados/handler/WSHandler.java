@@ -9,6 +9,8 @@ import org.springframework.web.socket.handler.TextWebSocketHandler;
 
 
 import java.io.IOException;
+import java.util.Timer;
+import java.util.TimerTask;
 
 @Component
 public class WSHandler extends TextWebSocketHandler implements sessionsInterface {
