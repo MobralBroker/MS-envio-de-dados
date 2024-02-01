@@ -26,18 +26,6 @@ public class WSHandler extends TextWebSocketHandler implements sessionsInterface
         System.out.println("[afterConnectionEstablished] session id" + session.getHandshakeHeaders());
         session.getAttributes().put("timeout", 1000);
 
-                new Timer().scheduleAtFixedRate(new TimerTask()  {
-            @Override
-            public void run() {
-                try {
-                    session.sendMessage(new TextMessage("$ALX.CHK"));
-                } catch (IOException e) {
-                    throw new RuntimeException(e);
-                }
-            }
-
-        }, 1000L, 1000L);
-
     }
 
     @Override
