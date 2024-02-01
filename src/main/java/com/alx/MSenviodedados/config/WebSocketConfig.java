@@ -20,8 +20,8 @@ public class WebSocketConfig implements WebSocketConfigurer {
 
     @Override
     public void registerWebSocketHandlers(WebSocketHandlerRegistry registry) {
-        registry.addHandler(myHandler(), "/chat").setAllowedOrigins("*").addInterceptors(new CustomHandshakeInterceptor());
-        registry.addHandler(myHandler2(), "/dash").setAllowedOrigins("*").addInterceptors(new CustomHandshakeInterceptor());
+        registry.addHandler(myHandler(), "/chat").setAllowedOrigins("*");//.addInterceptors(new CustomHandshakeInterceptor());
+        registry.addHandler(myHandler2(), "/dash").setAllowedOrigins("*");//.addInterceptors(new CustomHandshakeInterceptor());
 
     }
 
