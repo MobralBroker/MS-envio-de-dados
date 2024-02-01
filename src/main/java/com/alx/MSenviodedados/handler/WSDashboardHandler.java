@@ -7,6 +7,9 @@ import org.springframework.web.socket.WebSocketSession;
 import org.springframework.web.socket.handler.TextWebSocketHandler;
 
 import java.io.IOException;
+import java.util.Timer;
+import java.util.TimerTask;
+
 @Component
 public class WSDashboardHandler extends TextWebSocketHandler implements sessionsInterface {
 
@@ -20,6 +23,18 @@ public class WSDashboardHandler extends TextWebSocketHandler implements sessions
         System.out.println("[afterConnectionEstablished] session id" + session.getAcceptedProtocol());
         System.out.println("[afterConnectionEstablished] session id" + session.getHandshakeHeaders());
         session.getAttributes().put("timeout", 1000);
+
+        new Timer().scheduleAtFixedRate(new TimerTask()  {
+            @Override
+            public void run() {
+                try {
+                    session.sendMessage(new TextMessage("$ALX.CHK"));
+                } catch (IOException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+        }, 1000L, 1000L);
 
     }
 
